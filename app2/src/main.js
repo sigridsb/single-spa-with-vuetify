@@ -2,12 +2,15 @@ import Vue from 'vue';
 import singleSpaVue from 'single-spa-vue';
 
 import App from './App.vue';
+import '@babel/polyfill'
+import vuetify from './plugins/vuetify';
 
 Vue.config.productionTip = false;
 
 const vueLifecycles = singleSpaVue({
   Vue,
   appOptions: {
+    vuetify: vuetify,
     render(h) {
       return h(App, {
         props: {
