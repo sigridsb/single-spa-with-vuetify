@@ -8,6 +8,11 @@ import { registerApplication, start } from "single-spa";
     ),
   activeWhen: ["/"],
 }); */
+registerApplication({
+  name: "@sigrid/navbar",
+  app: () => System.import("@sigrid/navbar"),
+  activeWhen: ["/"],
+});
 
 registerApplication({
   name: "@sigrid/app1",
